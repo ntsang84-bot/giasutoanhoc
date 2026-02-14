@@ -101,7 +101,7 @@ const App: React.FC = () => {
     setQuizState(prev => ({ ...prev, status: 'loading' }));
     setErrorMsg(null);
     setLoadingMsg(customTopic.trim()
-      ? `Đang tạo 20 câu hỏi về: ${finalTopic}...`
+      ? `Đang tạo 12 câu hỏi về: ${finalTopic}...`
       : "AI đang soạn đề thi cho bạn..."
     );
 
