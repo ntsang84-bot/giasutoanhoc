@@ -170,50 +170,96 @@ export const CURRICULUM: Record<EducationLevel, GradeConfig[]> = {
       grade: 10,
       label: 'Lớp 10',
       topics: [
-        'Mệnh đề, mệnh đề phủ định, mệnh đề kéo theo',
-        'Tập hợp: Giao, hợp, hiệu, phần bù',
-        'Hàm số: Tập xác định, tập giá trị, tính đơn điệu',
-        'Hàm số bậc nhất, bậc hai',
-        'Phương trình và bất phương trình chứa dấu giá trị tuyệt đối',
-        'Vectơ: Định nghĩa, phép toán',
-        'Tọa độ của vectơ trong mặt phẳng',
-        'Tích vô hướng của hai vectơ',
-        'Phương trình đường thẳng, đường tròn'
+       '§1. Mệnh đề',
+  '§2. Tập hợp và các phép toán trên tập hợp',
+  '§3. Bất phương trình bậc nhất hai ẩn',
+  '§4. Hệ bất phương trình bậc nhất hai ẩn',
+
+  '§5. Hàm số và đồ thị',
+  '§6. Hàm số bậc nhất',
+  '§7. Hàm số bậc hai',
+
+  '§8. Hệ thức lượng trong tam giác',
+  '§9. Vectơ',
+  '§10. Tổng và hiệu của hai vectơ',
+  '§11. Tích của một số với một vectơ',
+  '§12. Tích vô hướng của hai vectơ',
+  '§13. Phương trình đường thẳng trong mặt phẳng tọa độ',
+
+  '§14. Quy tắc đếm',
+  '§15. Hoán vị – Chỉnh hợp – Tổ hợp',
+  '§16. Nhị thức Newton',
+
+  '§17. Số gần đúng và sai số',
+  '§18. Các số đặc trưng đo xu thế trung tâm',
+  '§19. Các số đặc trưng đo mức độ phân tán'
       ]
     },
     {
       grade: 11,
       label: 'Lớp 11',
       topics: [
-        'Hàm số lượng giác',
-        'Công thức lượng giác cơ bản',
-        'Công thức cộng, công thức nhân đôi, công thức biến đổi',
-        'Phương trình lượng giác cơ bản',
-        'Dãy số: Cách cho dãy số, giới hạn dãy số',
-        'Cấp số cộng, cấp số nhân',
-        'Giới hạn của hàm số, hàm số liên tục',
-        'Đạo hàm: Định nghĩa, ý nghĩa, quy tắc tính',
-        'Hình học không gian: Đường thẳng và mặt phẳng',
-        'Quan hệ song song và vuông góc trong không gian'
+        '§1. Hàm số lượng giác',
+  '§2. Phương trình lượng giác cơ bản',
+  '§3. Một số phương trình lượng giác thường gặp',
+
+  '§4. Dãy số',
+  '§5. Cấp số cộng',
+  '§6. Cấp số nhân',
+
+  '§7. Giới hạn của dãy số',
+  '§8. Giới hạn của hàm số',
+  '§9. Hàm số liên tục',
+
+  '§10. Định nghĩa và ý nghĩa của đạo hàm',
+  '§11. Các quy tắc tính đạo hàm',
+  '§12. Đạo hàm cấp hai',
+
+  '§13. Đại cương về đường thẳng và mặt phẳng trong không gian',
+  '§14. Hai đường thẳng song song trong không gian',
+  '§15. Đường thẳng và mặt phẳng song song',
+  '§16. Hai mặt phẳng song song',
+
+  '§17. Đường thẳng vuông góc với mặt phẳng',
+  '§18. Hai mặt phẳng vuông góc',
+  '§19. Khoảng cách trong không gian',
+
+  '§20. Vectơ trong không gian',
+  '§21. Toạ độ của vectơ trong không gian'
       ]
     },
     {
       grade: 12,
       label: 'Lớp 12',
       topics: [
-        'Khảo sát hàm số bậc ba, bậc bốn trùng phương',
-        'Khảo sát hàm số nhất biến (phân thức)',
-        'Tiếp tuyến của đồ thị hàm số',
-        'Cực trị của hàm số',
-        'Giá trị lớn nhất, giá trị nhỏ nhất',
-        'Hàm số mũ và hàm số logarit',
-        'Phương trình, bất phương trình mũ và logarit',
-        'Nguyên hàm: Định nghĩa, tính chất',
-        'Tích phân và ứng dụng (diện tích, thể tích)',
-        'Số phức: Định nghĩa, phép toán',
-        'Hệ tọa độ trong không gian Oxyz',
-        'Phương trình mặt phẳng, đường thẳng trong không gian',
-        'Mặt cầu, khoảng cách trong không gian'
+    '§1. Tính đơn điệu và cực trị của hàm số',
+  '§2. Giá trị lớn nhất và giá trị nhỏ nhất của hàm số',
+  '§3. Đường tiệm cận của đồ thị hàm số',
+  '§4. Khảo sát và vẽ đồ thị một số hàm số cơ bản',
+  'Bài tập cuối chương I',
+
+  '§5. Vectơ và các phép toán trong không gian',
+  '§6. Toạ độ của vectơ trong không gian',
+  '§7. Biểu thức toạ độ của các phép toán vectơ',
+  'Bài tập cuối chương II',
+
+  '§8. Khoảng biến thiên và khoảng tứ phân vị của mẫu số liệu ghép nhóm',
+  '§9. Phương sai và độ lệch chuẩn của mẫu số liệu ghép nhóm',
+  'Bài tập cuối chương III',
+
+  '§10. Nguyên hàm',
+  '§11. Tích phân',
+  '§12. Ứng dụng hình học của tích phân',
+  'Bài tập cuối chương IV',
+
+  '§13. Phương trình mặt phẳng',
+  '§14. Phương trình đường thẳng trong không gian',
+  '§15. Phương trình mặt cầu',
+  'Bài tập cuối chương V',
+
+  '§16. Xác suất có điều kiện',
+  '§17. Công thức xác suất toàn phần và công thức Bayes',
+  'Bài tập cuối chương VI'
       ]
     }
   ]
