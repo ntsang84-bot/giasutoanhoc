@@ -448,13 +448,13 @@ const App: React.FC = () => {
           rel="noreferrer"
           className="hover:text-blue-400 transition-colors duration-200 flex items-center gap-2"
         >
-          <span className="font-bold">Facebook:</span> tranhoaithanhvicko
+          <span className="font-bold">Facebook:</span> 2026 THPTMT
         </a>
 
         <div className="hidden md:block w-1.5 h-1.5 rounded-full bg-slate-600"></div>
 
         <span className="hover:text-emerald-400 transition-colors duration-200 cursor-default flex items-center gap-2">
-          <span className="font-bold">Zalo:</span> 0348296773
+          <span className="font-bold">Zalo:</span>
         </span>
       </div>
     </div>
