@@ -99,109 +99,33 @@ export const generateQuizQuestions = async (
     const prompt = `
       Generate ${count} [${difficulty}] level math questions for Grade ${grade} on topic '${topic}' following Vietnamese curriculum.
       
-     CRITICAL FORMATTING RULES (STRICTLY USE LaTeX)
-1. BẮT BUỘC sử dụng cú pháp LaTeX cho toàn bộ biểu thức toán
-
-Phải đặt biểu thức trong:
-
-$...$ (inline math)
-
-$$...$$ (display math)
-
-BẮT BUỘC sử dụng các lệnh LaTeX sau:
-
-Lũy thừa – chỉ số: $x^2$, $x_1$, $a^n$
-
-Phân số: $\frac{a}{b}$
-
-Căn: $\sqrt{x}$, $\sqrt[n]{x}$
-
-Nhân: $\cdot$, $\times$
-
-Suy ra: $\Rightarrow$
-
-Tương đương: $\Leftrightarrow$
-
-Mũi tên: $\to$
-
-Hình học: $\angle A$, $\triangle ABC$, $\perp$, $\parallel$, $\pi$, $^\circ$
-
-Tập hợp – logic: $\in$, $\subset$, $\cup$, $\cap$, $\emptyset$, $\forall$, $\exists$
-
-So sánh: $\neq$, $\leq$, $\geq$, $\approx$
-
-❌ Không sử dụng ký hiệu Unicode thay thế cho LaTeX.
-
-2. CONTENT STRUCTURE
-
-Câu hỏi phải viết bằng tiếng Việt.
-
-Mỗi câu gồm 4 lựa chọn: A, B, C, D.
-
-Lời giải phải trình bày từng bước rõ ràng bằng:
-
-- Bước 1: ...
-- Bước 2: ...
-- Bước 3: ...
-
-
-hoặc sử dụng môi trường:
-
-\begin{itemize}
-\item ...
-\item ...
-\end{itemize}
-
-
-Ví dụ định dạng đáp án cuối bài:
-
-$a = 1,\ b = -2,\ c = 3$
-
-
-Phải ghi rõ:
-
-\textbf{Đáp án đúng: B}
-
-3. ANSWER DISTRIBUTION (QUAN TRỌNG)
-
-Đáp án đúng phải phân bố đều giữa A, B, C, D.
-
-Không để một phương án xuất hiện quá nhiều lần.
-
-Với ${count} câu, mỗi phương án nên xuất hiện xấp xỉ:
-
-\left\lceil \frac{${count}}{4} \right\rceil
-4. Difficulty Definition cho ${difficultyLabel} (${difficulty})
-🔹 Nhận biết (Recognition)
-
-Nhớ công thức trực tiếp.
-
-Tính toán 1 bước.
-
-Ví dụ: Giải phương trình bậc nhất đơn giản
-$ax + b = 0$
-
-🔹 Thông hiểu (Understanding)
-
-Bài toán 2–3 bước.
-
-Áp dụng công thức có biến đổi.
-
-Kết hợp 2 khái niệm.
-
-Ví dụ: Giải phương trình bậc hai
-$ax^2 + bx + c = 0$
-
-🔹 Vận dụng (Application)
-
-Bài toán tình huống phức hợp.
-
-Kết hợp nhiều kiến thức.
-
-Tối thiểu 3 bước giải.
-
-Ví dụ: Tìm cực trị của hàm số
-$y = ax^3 + bx^2 + cx + d$
+    CRITICAL FORMATTING RULES (STRICTLY NO LATEX):
+      1. DO NOT use LaTeX syntax. NO '$', NO '\\frac', NO '\\sqrt', NO '\\cdot', NO '\\Rightarrow'.
+      2. USE UNICODE characters for all math symbols to make it visual and readable as plain text:
+         - Powers/Indices: Use superscripts/subscripts. Example: x², x³, aⁿ, x₁, x₂. (NOT x^2, x_1)
+         - Fractions: Use slash or Unicode fractions. Example: 1/2, 3/4, ½, ⅓, (a+b)/c. (NOT \\frac{a}{b})
+         - Roots: Use symbol. Example: √x, ∛x. (NOT \\sqrt{x})
+         - Multiplication: Use '×' or '·'. (NOT *)
+         - Arrows: Use '⇒' for implication, '⇔' for equivalent, '→' for arrow.
+         - Geometry: ∠A, ΔABC, ⊥, ||, π, °.
+         - Sets/Logic: ∈, ⊂, ∪, ∩, ∅, ∀, ∃.
+         - Comparison: ≠, ≤, ≥, ≈.
+      
+      3. CONTENT STRUCTURE:
+         - Questions must be in Vietnamese.
+         - Explanation must be step-by-step using bullet points (-) or new lines for readability.
+         - Example Answer Format: "a = 1, b = -2, c = 3" (Clean text).
+         - CORRECT ANSWER: Must be one of A, B, C, D.
+      
+      4. ANSWER DISTRIBUTION (IMPORTANT):
+         - Ensure that the correct answers are evenly distributed among A, B, C, and D.
+         - Avoid making 'A' the correct answer too frequently.
+         - For ${count} questions, aim for approximately ${Math.ceil(count/4)} of each option.
+      
+      Difficulty Definition for ${difficultyLabel} (${difficulty}):
+      - Nhận biết (Recognition): Direct recall, simple calculation (1 step).
+      - Thông hiểu (Understanding): Multi-step problem, apply formula (2-3 steps).
+      - Vận dụng (Application): Complex scenario, integrate multiple concepts (3+ steps).
       
       Output JSON format:
       [
