@@ -101,7 +101,7 @@ const App: React.FC = () => {
     setQuizState(prev => ({ ...prev, status: 'loading' }));
     setErrorMsg(null);
     setLoadingMsg(customTopic.trim()
-      ? `Đang tạo 20 câu hỏi về: ${finalTopic}...`
+      ? `Đang tạo 12 câu hỏi về: ${finalTopic}...`
       : "AI đang soạn đề thi cho bạn..."
     );
 
@@ -398,7 +398,7 @@ const App: React.FC = () => {
                   </div>
                   <div>
                     <h3 className={`font-bold text-lg ${currentTheme.text}`}>Cấu trúc bài thi</h3>
-                    <p className="text-sm opacity-80 text-gray-600 font-medium mt-1">20 câu hỏi • 3 mức độ • Tự luyện tập</p>
+                    <p className="text-sm opacity-80 text-gray-600 font-medium mt-1">12 câu hỏi • 2 mức độ • Tự luyện tập</p>
                   </div>
                 </div>
                 <div className="flex gap-2">
